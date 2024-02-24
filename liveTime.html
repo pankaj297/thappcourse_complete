@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Click the botton to display a date after changing the </h3>
+
+    <button onclick="myfunction()">Try it</button>
+
+    <p id="date"></p>
+    <p id="time"></p>
+
+     <script>
+        // function myfunction(){
+        //     let t = new Date();
+        //     t.setHours(5);
+        //     document.getElementById('demo').innerHTML = t;
+        // }
+
+        // let t = new Date().toLocaleTimeString();
+        // document.getElementById("time").innerHTML = t;
+
+        // let D = new Date().toLocaleDateString();
+        // document.getElementById("date").innerHTML = D;
+
+
+        (function() {
+            setInterval(() => {
+            let d = new Date().toLocaleTimeString();
+            document.getElementById('time').innerHTML = d;
+            }, 1000)
+        })();
+
+     </script>
+</body>
+</html>

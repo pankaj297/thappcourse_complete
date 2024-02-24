@@ -1,0 +1,116 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Interval</title>
+    <style>
+        .main-div {
+            text-align: center;
+            margin-top: 10%;
+        }
+
+        button {
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="main-div">
+        <div>
+            <p> Hi Pankaj Naik </p>
+            <br>
+            <button id="btn">Click Here</button>
+        </div>
+    </div>
+
+    <script>
+        const pkk = document.querySelector('p');
+        const btn = document.querySelector('#btn');
+
+        let num = 1;
+
+        const showNum = () => {
+            pkk.innerHtml = "Loading....👻👻";
+
+            setInterval(() => {
+                pkk.innerHtml = ` ${num} `;
+                num++;
+            }, 1000)
+        }
+
+        btn.addEventListener('click', showNum);
+
+    </script>
+
+</body>
+
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Interval</title>
+    <style>
+        .main-div {
+            text-align: center;
+            margin-top: 10%;
+        }
+
+        button {
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="main-div">
+        <div>
+            <p> Hi Pankaj Naik </p>
+            <br>
+            <button id="btn"> Start </button>
+            <button id="btn1"> Stop </button>
+        </div>
+    </div>
+
+    <script>
+        const pkk = document.querySelector('p');
+        const btn = document.querySelector('#btn');
+        const stopInterval = document.querySelector('#btn1');
+
+        
+        let num = 0;
+        let timeRef;
+    
+        const showNum = () => {
+            pkk.innerHtml = "Loading....👻👻";
+
+            timeRef = setInterval(() => {
+                pkk.innerHtml = ` ${num} `;
+                num++;
+            }, 1000)
+        }
+
+        btn.addEventListener('click', showNum);
+
+        stopInterval.addEventListener('click', () => {
+            clearInterval(timeRef);
+        });
+
+    </script>
+
+</body>
+
+</html>

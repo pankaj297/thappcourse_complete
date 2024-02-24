@@ -1,0 +1,85 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Js String methods</h1> 
+
+    <h3>String Lenght</h3>
+    <p id="demo"></p>
+
+    <h3>the Slice() Method</h3>
+    <p id="demo1"></p>
+
+
+    <h3>Js String Substing</h3>
+    <p id="demo2"></p>
+
+    <h3>Replacing String Content</h3>
+    <button onclick="myFunction()">Click it</button>
+    <p id="demo3">Please visit Microsoft!</p>
+
+
+    <script>
+        let text = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem libero voluptates cum corporis atque quae, odio eveniet tenetur accusamus sapiente illum, illo beatae facilis rem voluptate numquam eligendi quasi dolores?<";
+
+        document.getElementById("demo").innerHTML = `The string lenth is ${text.length} `;
+
+        // the Slice() Method
+        let fruits = "Apple, Banana, Kiwi";
+        let part = fruits.slice(7,13);
+
+        document.getElementById("demo1").innerHTML = part;
+
+
+        // Js String Substring()
+        let fruits1 = "Apple, Banana, Kiwi";
+        let part1 = fruits.slice(-4);
+
+        document.getElementById("demo2").innerHTML = part1;
+
+        // Replacing String Content
+        function myFunction(){
+            let textt = document.getElementById("demo3").innerHTML;
+            document.getElementById("demo3").innerHTML = textt.replace("Microsoft", "W3Schools");
+        }
+
+    </script>
+</body>
+</html> -->
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Upper Case</h2>
+    <button onclick="myFunction()">Click it</button>
+
+   
+
+    <p id="demo0">Hello Pankaj</p>
+    <p id="demo1">Hello Pankaj</p>
+
+
+    <script>
+         function myFunction (){
+            let text = document.getElementById("demo0").innerHTML;
+            document.getElementById("demo0").innerHTML = text.toUpperCase();
+            document.getElementById("demo1").innerHTML = text.toLowerCase();
+
+         }
+
+    </script>
+</body>
+</html>

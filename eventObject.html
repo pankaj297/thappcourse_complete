@@ -1,0 +1,100 @@
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Object</title>
+    <style>
+        body{
+            background: pink;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .cont{
+            text-align: center;
+        }
+        .cont .btn{
+            width: 150px;
+            height: 40px;
+            box-shadow: 3px 5px aqua;
+            color: #000;
+            background-color: yellow;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <h1>Event Object 😍</h1>
+        <button class="btn" id="btnWay">Event Listeners</button>
+    </div>
+
+    <script>
+        const btnWay = document.getElementById('btnWay');
+
+        const checkEvent = () => {
+            alert('i will learn about event');
+            console.log(event);
+            console.log(event.target);
+            console.log(event.type);
+        }
+        btnWay.addEventListener('click', checkEvent);
+
+        // btnWay.onclick = function (){
+        //     alert('Hello i am pankaj');
+        // }
+    </script>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Object</title>
+    <style>
+        body{
+            background: pink;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .cont{
+            text-align: center;
+        }
+        .cont .btn{
+            width: 150px;
+            height: 40px;
+            box-shadow: 3px 5px aqua;
+            color: #000;
+            background-color: yellow;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <h1>Event Object 😍</h1>
+        <button class="btn" id="btnWay">Event Listeners</button>
+    </div>
+
+    <script>
+          const button = document.getElementById('btnWay');
+
+          const checkEv = () => {
+            alert('Tu Pagal aahes ka parat parat ka button click kartoy😡😡');
+            console.log(event);
+            console.log(event.target);
+            console.log(event.type);
+
+          }
+          button.addEventListener('click', checkEv);
+    </script>
+</body>
+</html>

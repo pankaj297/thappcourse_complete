@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <style>
+         body{
+            font-family: 'Courier New', Courier, monospace;
+            background: aqua;
+            display: grid;
+            place-items: center;
+         }
+         button{
+            display: inline-block;
+            background: yellow;
+            color: brown;
+            font-size: 16px;
+            font-weight: normal;
+            width: 132px;
+            text-align: center;
+            border-radius: 3px;
+            transition: 400ms;
+            text-decoration: none;
+            padding: 10px 22px;
+            z-index: 100000;
+            outline: none;
+            border: none;
+            cursor: pointer;
+
+        }
+
+        p{
+            text-align: center;
+            color: black;
+
+        }
+        h1{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <p class="para">Plz like the video</p>
+    <p class="para">Plz accordion Shere this video</p>
+    <p>Don't forget to subcribe the content of the h1</p>
+    <h1 id="heading">changed the content of the h1</h1>
+
+
+    <form action="">
+        <label for="">male</label>
+        <input type="radio" name="gender" id="">
+        <label for="">female</label>
+        <input type="radio" name="gender" id="">
+        <label for="">other</label>
+        <input type="radio" name="gender" id="">
+    </form>
+<br>
+
+    <button onclick="changeContent()">Click Me</button>
+
+    <script>
+        const changeContent = () => {
+            //we can directly write
+            // document.getElementById('heading').innerHTML = "Welcome to Pankaj Naik";
+
+            //by taking the Reference, heading is the onject here
+            // const headingchage = document.getElementById('heading');
+            // headingchage.innerHTML = "Welcome to pankaj";
+
+           
+            // console.log(document.getElementsByClassName('para'));
+
+           
+            // conaole.log( document.getElementsByTagName('p'));
+
+            // consoel.log(document.getElementsByName('gender'));
+            // document.querySelector('.para').innerHTML = "I changed again";
+
+            console.log(document.querySelectorAll('#heading'));
+        }
+    </script>
+    
+</body>
+</html>

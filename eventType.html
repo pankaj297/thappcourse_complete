@@ -1,0 +1,373 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Type</title>
+    <style>
+        body{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background: silver;
+        }
+        h1{
+            text-align: center;
+            color: brown;
+        }
+        .credit{
+            text-align: center;
+            color: aqua;
+        }
+        .content{
+            padding-top: 45px;
+            padding-bottom: 20px;
+           
+        }
+        .button_container{
+            width: 176px;
+            margin: 0 auto;
+            margin-top: 30px;
+            padding-top: 40px;
+            display: flex;
+        }
+        .button_su{
+            
+            overflow: hidden;
+            position: relative;
+            display: inline-block;
+            border-radius: 3px;
+            margin-bottom: 30px;
+            box-shadow: 0px 10px 8px -8px rgba(0, 0, 0, 0.6);
+
+        }
+        .su_button_circle{
+            background-color: red;
+            border-radius: 1000px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0px;
+            height: 0px;
+            margin-left: 0px;
+            margin-top: 0px;
+            pointer-events: none;
+
+        }
+        .button_su_inner{
+            display: inline-block;
+            background: yellow;
+            color: black;
+            font-size: 10px;
+            font-weight: normal;
+            width: 132px;
+            text-align: center;
+            border-radius: 3px;
+            transition: 400ms;
+            text-decoration: none;
+            padding: 18px;
+            z-index: 100000;
+        }
+        .button_text_container{
+            position: relative;
+            z-index: 10000;
+        }
+        .explode-circle{
+            animation: desplode 0.5s forwards;
+
+        }
+        .desplode-circle{
+            animation: desplode 0.5s forwards;
+        }
+
+        .btn-con{
+            text-align: center;
+        }
+
+         .btn{
+            width: 80px;
+            height: 40px;
+            padding: 3px;
+            cursor: pointer;
+            background-color: aquamarine;
+            border-radius: 3px;
+            border: none;
+            box-shadow: 2px 3px aqua;
+         }
+
+        </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Differnt Event Types In JavaScript</h1>
+        <div class="button-container">
+            <div class="button_su">
+                <span class="su_button_circle">
+                </span>
+                    <a href="#" class="button_su_inner" onclick="alert('I am awesome, But No one ued me ')">
+                        <span class="button_text_container">
+                            simple Inline alert()
+                        </span>
+                    </a>
+            </div>
+
+            <div class="button_su">
+                <span class="su_button_circle">
+                </span>
+                <a href="#" class="button_su_inner" onclick="callingFunction()">
+                  <span class="button_text_container">
+                    By calling a Function
+                  </span>
+                </a>
+            </div>
+
+            <div class="button_su">
+                <span class="su_button_circle"></span>
+                <a href="#" class="button_su_inner">
+                    <span class="button_text_container" id="thirdWay">
+                        Inline event
+                    </span>
+                </a>
+            </div>
+
+            <div class="button_su">
+               <span class="su_button_circle">
+               </span>
+               <a href="#" class="button_su_inner" id="fourtWay">
+                <sapn class="button_text_container">
+                    Event Listeners
+                </sapn>
+               </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="btn-con">
+    <button class="btn" id="btn1">Sumbit</button>
+    </div>
+<script>
+       //2 way to writing function
+      const callingFunction = () => {
+        alert('most common way of writing functions');
+      }
+
+      //3 way to writing funtion
+      const thirdWay = document.getElementById('thirdWay');
+
+      thirdWay.onclick = function() {
+        alert('most  common way of writing functions againnnn');
+      }
+
+      thirdWay.onclick = function() {
+        console.log('most  common way of writing functions againnnn');
+      }
+
+
+      //4 way to writing function\
+      const fourtWay = document.querySelector('#fourtWay');
+
+      fourtWay.addEventListener('click', () => {
+          alert('I love this way of writing ')
+      });
+
+      fourtWay.addEventListener('click', () => {
+          console.log('I love this way of writing ')
+      });
+
+      const btn1 = document.getElementById('btn1');
+
+      btn1.onclick = function () {
+         alert('Hi Pankaj');
+      }
+
+    </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Type</title>
+    <style>
+        body{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background: silver;
+        }
+        h1{
+            text-align: center;
+            color: brown;
+        }
+        .credit{
+            text-align: center;
+            color: aqua;
+        }
+        .content{
+            padding-top: 45px;
+            padding-bottom: 20px;
+           
+        }
+        .button_container{
+            width: 176px;
+            margin: 0 auto;
+            margin-top: 30px;
+            padding-top: 40px;
+            display: flex;
+        }
+        .button_su{
+            
+            overflow: hidden;
+            position: relative;
+            display: inline-block;
+            border-radius: 3px;
+            margin-bottom: 30px;
+            box-shadow: 0px 10px 8px -8px rgba(0, 0, 0, 0.6);
+
+        }
+        .su_button_circle{
+            background-color: red;
+            border-radius: 1000px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0px;
+            height: 0px;
+            margin-left: 0px;
+            margin-top: 0px;
+            pointer-events: none;
+
+        }
+        .button_su_inner{
+            display: inline-block;
+            background: yellow;
+            color: black;
+            font-size: 10px;
+            font-weight: normal;
+            width: 132px;
+            text-align: center;
+            border-radius: 3px;
+            transition: 400ms;
+            text-decoration: none;
+            padding: 18px;
+            z-index: 100000;
+        }
+        .button_text_container{
+            position: relative;
+            z-index: 10000;
+        }
+        .explode-circle{
+            animation: desplode 0.5s forwards;
+
+        }
+        .desplode-circle{
+            animation: desplode 0.5s forwards;
+        }
+
+        .btn-con{
+            text-align: center;
+        }
+
+         .btn{
+            width: 80px;
+            height: 40px;
+            padding: 3px;
+            cursor: pointer;
+            background-color: aquamarine;
+            border-radius: 3px;
+            border: none;
+            box-shadow: 2px 3px aqua;
+         }
+
+        </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Differnt Event Types In JavaScript</h1>
+        <div class="button-container">
+            <div class="button_su">
+                <span class="su_button_circle">
+                </span>
+                    <a href="#" class="button_su_inner" onclick="alert('Bar Bar Pareshan Mat Kar yr 😒😒')">
+                        <span class="button_text_container">
+                            simple Inline alert()
+                        </span>
+                    </a>
+            </div>
+
+            <div class="button_su">
+                <span class="su_button_circle">
+                </span>
+                <a href="#" class="button_su_inner" onclick="callingFunction()">
+                  <span class="button_text_container">
+                    By calling a Function
+                  </span>
+                </a>
+            </div>
+
+            <div class="button_su">
+                <span class="su_button_circle"></span>
+                <a href="#" class="button_su_inner">
+                    <span class="button_text_container" id="third">
+                        Inline event
+                    </span>
+                </a>
+            </div>
+
+            <div class="button_su">
+               <span class="su_button_circle">
+               </span>
+               <a href="#" class="button_su_inner" id="fourth">
+                <sapn class="button_text_container">
+                    Event Listeners
+                </sapn>
+               </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="btn-con">
+    <button class="btn" id="btn1">Sumbit</button>
+    </div>
+<script>
+       //2 way to writing function
+       const callingFunction = () => {
+        alert('Hi bati Khaldo kai 🍕🍝😋🍽️🍜');
+       }
+     
+
+      //3 way to writing funtion
+
+      const third = document.getElementById('third');
+
+     third.onclick = function () {
+         alert('Dushman na kare dost ne wo kaam kiya hai 😔😟☹️🥹');
+     }
+
+    //    third.onclick = function () {
+    //     console.log('good job');
+    //    }
+
+      //4 way to writing function\
+   
+      const fourth = document.querySelector('#fourth');
+
+      fourth.addEventListener('click', () => {
+           alert('Tuje koi kam nahi he ky bar bar click mat kar 😡😡🤬');
+      });
+
+    //   fourth.addEventListener('click', () => {
+    //     console.log('Aap me improvement dik rahi he'); 
+    //   });
+
+      const button = document.getElementById('btn1');
+
+      button.onclick = function () {
+        alert('Bus Bahut hua.. 🤬😡😒😔😔');
+      }
+    
+      
+    </script>
+</body>
+</html>

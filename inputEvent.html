@@ -1,0 +1,116 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Events</title>
+    <style>
+        .main-div{
+            text-align: center;
+            margin-top: 10%;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-div">
+        <div>
+            <label for="">Your Name</label>
+            <input type="text" name="" id="ice">
+            <br>
+            <label>Choose an ice cream flavor🍧🍦🍨
+                <select name="iceCreams" id="iceCreams" onchange="selectElement()">
+                <option value="">Select One ...</option>
+                <option value="chocolate">chocolate</option>
+                <option value="sardine">sardine</option>
+                <option value="vanilla">vanilla</option>
+                </select>
+            </label>
+            <br>
+            <div id="result"></div>
+        </div>
+    </div>
+
+    <script>
+        const selectElement = () => {
+            const inputChange = document.getElementById('ice').value;
+            const iceCreams = document.getElementById('iceCreams').value;
+            const result = document.getElementById('result').innerHTML = `Mr ${inputChange} select ${iceCreams} ice-Cream flavour`;
+
+           
+        }
+
+        // const iceCreams = document.getElementById('iceCreams');
+        // iceCreams.addEventListener('change', () => {
+        //    const inputChange = document.getElementById('ice').value;
+        //    const iceCreams = document.getElementById('iceCreams').value;
+        //    const result = document.getElementById('result');
+
+        //    result.innerHTML = `Mr ${inputChange} select ${iceCreams} ice-Cream flavour`;
+        // });
+        
+    </script>
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Events</title>
+    <style>
+        .main-div{
+            text-align: center;
+            margin-top: 10%;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-div">
+        <div>
+            <label for="">Your Name</label>
+            <input type="text" name="" id="ice">
+            <br>
+            <label>Choose an ice cream flavor🍧🍦🍨
+                <select name="iceCreams" id="iceCreams" onchange="selectElement()">
+                <option value="">Select One ...</option>
+                <option value="chocolate">chocolate</option>
+                <option value="sardine">sardine</option>
+                <option value="vanilla">vanilla</option>
+                </select>
+            </label>
+            <br>
+            <div id="result"></div>
+        </div>
+    </div>
+
+    <script>
+        // const selectElement = () => {
+        //     const onchange = document.getElementById('ice').value;
+        //     const iceCreams = document.getElementById('iceCreams').value;
+        //     const result = document.getElementById('result').innerHTML = `Mr ${onchange} You select ${iceCreams} flavour`;
+
+        // }
+
+
+        const eventch = document.getElementById('iceCreams');
+
+        eventch.addEventListener('change', () => {
+            const onchange = document.getElementById('ice').value;
+            const iceCreams = document.getElementById('iceCreams').value;
+            const result = document.getElementById('result');
+
+            result.innerHTML = `Mr ${onchange} You select ${iceCreams} flavour`;
+        });
+
+    </script>
+</body>
+</html>
